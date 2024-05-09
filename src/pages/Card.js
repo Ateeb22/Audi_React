@@ -6,17 +6,20 @@ import { useEffect } from "react";
 function GridExample() {
   const [show, setShow] = useState(false);
   const [getData, SetData] = useState([]);
-  const [getModalData, SetDataModalData] = useState([])
+  const [getModalData, SetDataModalData] = useState({})
+
+  useEffect(() => {
+    SetData(CardData)
+  },[])
 
   const handleClose = () => setShow(false);
   const handleShow = (id) =>{
     setShow(true);
     console.log(id)
-
+    const filteredData = getData.filter(item => item.id === id);
+    SetDataModalData(filteredData[0])
   }
-  useEffect(() => {
-    SetData(CardData)
-  },[])
+ 
   // return (
 
   // const cardData = [
@@ -70,18 +73,22 @@ function GridExample() {
                 <Card.Title>{card.title}</Card.Title>
                 <Card.Text>{card.description}</Card.Text>
               </Card.Body>
-              <Button  className="d-flex justify-content-center"  id="ok" onClick={()=>handleShow(card.id)}>
+              <Button  className="d-flex justify-content-center"  id="but" onClick={()=>handleShow(card.id)}>
                   Specification
                 </Button>
               <Card.Footer className="d-flex justify-content-center">
-                <small>{card.lastUpdated}</small>
-                
+                <small>{card.lastUpdated}</small>                
               </Card.Footer>             
             </Card>
           </Col>
         ))}
       </Row>
 
+
+
+      {/* {getData.map((card) => ( */}
+
+      
       <Modal
         show={show}
         onHide={handleClose}
@@ -89,16 +96,17 @@ function GridExample() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
+          <Modal.Title>{getModalData.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body></Modal.Body>
+        <Modal.Body>{getModalData.info}</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Understood</Button>
+          <Button variant="warning" onClick={handleClose} >Understood</Button>
         </Modal.Footer>
       </Modal>
+      {/* ))} */}
     </Container>
   );
 }

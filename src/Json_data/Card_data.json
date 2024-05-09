@@ -5,7 +5,9 @@
       "title": "Audi-e-Tron",
       "description":
         "The Audi e-tron represents the pinnacle of electric vehicle innovation, offering a harmonious blend of cutting-edge technology.",
-      "lastUpdated": "Last updated 30 mins ago"
+      "lastUpdated": "Last updated 30 mins ago",
+      "name": "Audi-e-Tron",
+      "info": "This car is really Super fast keep your child away from the Car."
     },
     {
       "id": 2,
@@ -13,7 +15,9 @@
       "title": "Audi SportBack",
       "description":
         "The Audi e-tron Sportback merges sleek, aerodynamic design with the electrifying performance of an all-electric powertrain.",
-      "lastUpdated": "Last updated 29 mins ago"
+      "lastUpdated": "Last updated 29 mins ago",
+      "name": "Audi SportBack",
+      "info": "Vehicle is highly lightweighted dont reach the speed above 300."
     },
     {
       "id": 3,
@@ -21,7 +25,10 @@
       "title": "Audi S3 Sedan",
       "description":
         "The Audi S3 Sedan exudes sporty sophistication, combining exhilarating performance with luxurious comfort and cutting-edge technology",
-      "lastUpdated": "Last updated 40 min ago"
+      "lastUpdated": "Last updated 40 min ago",
+      "name": "Audi S3 Sedan",
+      "info": "This car is totally hybrid make your battery charge before driving."
+       
     },
     {
       "id": 4,
@@ -29,8 +36,11 @@
       "title": "Audi A3 Saloon",
       "description":
         "The Audi A3 Saloon epitomizes compact luxury, delivering a perfect balance of refined elegance, advanced technology.",
-      "lastUpdated": "Last updated 10 min ago"
+      "lastUpdated": "Last updated 10 min ago",
+      "name": "Audi A3 Saloon",
+      "info": "Make your car clean before sitting and driving."
     }
+   
     
    
   ]

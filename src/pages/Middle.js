@@ -3,19 +3,20 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
 
+
 function Middle() {
   return (
     <Container className="he">
       <Row>
-        <Col lg={12} >
+        <Col lg={12} md={12} sm={12} xs={12}>
           <div class="d-flex justify-content-around">
-          <h1 class="p-2">
-            Luxurious exhilarating performance by{" "}
-            <Badge bg="primary">Audi</Badge>
-          </h1>
+            <h1 class="p-2">
+              Luxurious exhilarating performance by{" "}
+              <Badge bg="primary">Audi</Badge>
+            </h1>
           </div>
-          <h4 class="d-flex justify-content-around" id="h-4" >
-          Redefining the driving experience with every Journey 
+          <h4 class="d-flex justify-content-around" id="h-4">
+            Redefining the driving experience with every Journey
           </h4>
         </Col>
       </Row>
