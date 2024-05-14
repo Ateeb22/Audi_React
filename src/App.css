@@ -79,7 +79,7 @@
 }
 
 .he {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 .ca {
   margin-top: 30px;
@@ -87,7 +87,33 @@
 #h-4 {
   color: dodgerblue;
 }
-#but{
+/* #but{
+
+} */
+#but:hover{
   background: rgb(112,175,255);
 background: radial-gradient(circle, rgba(112,175,255,1) 0%, rgba(162,251,251,1) 100%);
+}
+.de{
+  margin-top: 60px;
+}
+.round{
+  width: 690px;
+  height: 500px  !important;
+  object-fit: cover;
+  
+}
+#txt{
+  margin-top: 70px;
+  font: small-caps 34px Verdana;
+  color: navy;
+}
+#mid{
+  font: 22px Verdana;
+}
+#bot{
+  font: 18px Verdana;
+}
+.ro{
+  float: right;
 }

@@ -3,8 +3,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { SiAudi } from "react-icons/si";
+// import { SiAudi } from "react-icons/si";
 import Search from "../pages/Search";
+import Spinner from 'react-bootstrap/Spinner';
+
 
 function HeadNavbar() {
   return (
@@ -18,7 +20,11 @@ function HeadNavbar() {
             lg={2}
             className="d-flex align-items-center"
           >
-            <SiAudi className="call" />
+            <Spinner animation="border" variant="primary" />
+            <Spinner animation="border" variant="danger" />
+            <Spinner animation="border" variant="danger" />
+            <Spinner animation="border" variant="primary" />
+            {/* <SiAudi className="call" /> */}
           </Col>
           <Col
             sm={12}

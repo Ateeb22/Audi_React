@@ -6,20 +6,20 @@ import { useEffect } from "react";
 function GridExample() {
   const [show, setShow] = useState(false);
   const [getData, SetData] = useState([]);
-  const [getModalData, SetDataModalData] = useState({})
+  const [getModalData, SetDataModalData] = useState({});
 
   useEffect(() => {
-    SetData(CardData)
-  },[])
+    SetData(CardData);
+  }, []);
 
   const handleClose = () => setShow(false);
-  const handleShow = (id) =>{
+  const handleShow = (id) => {
     setShow(true);
-    console.log(id)
-    const filteredData = getData.filter(item => item.id === id);
-    SetDataModalData(filteredData[0])
-  }
- 
+    console.log(id);
+    const filteredData = getData.filter((item) => item.id === id);
+    SetDataModalData(filteredData[0]);
+  };
+
   // return (
 
   // const cardData = [
@@ -73,29 +73,29 @@ function GridExample() {
                 <Card.Title>{card.title}</Card.Title>
                 <Card.Text>{card.description}</Card.Text>
               </Card.Body>
-              <Button  className="d-flex justify-content-center"  id="but" onClick={()=>handleShow(card.id)}>
-                  Specification
-                </Button>
+              <Button
+                className="d-flex justify-content-center"
+                id="but"
+                variant="primary"
+                onClick={() => handleShow(card.id)}
+              >
+                Specification
+              </Button>
               <Card.Footer className="d-flex justify-content-center">
-                <small>{card.lastUpdated}</small>                
-              </Card.Footer>             
+                <small>{card.lastUpdated}</small>
+              </Card.Footer>
             </Card>
           </Col>
         ))}
       </Row>
 
-
-
-      {/* {getData.map((card) => ( */}
-
-      
       <Modal
         show={show}
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>{getModalData.name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{getModalData.info}</Modal.Body>
@@ -103,10 +103,11 @@ function GridExample() {
           <Button variant="danger" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="warning" onClick={handleClose} >Understood</Button>
+          <Button variant="warning" onClick={handleClose}>
+            Understood
+          </Button>
         </Modal.Footer>
       </Modal>
-      {/* ))} */}
     </Container>
   );
 }

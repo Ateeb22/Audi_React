@@ -3,6 +3,9 @@ import HeadNavbar from "../components/navbar";
 import Cardwork from "./Card";
 import Button from "react-bootstrap/Button";
 import Middle from "./Middle";
+import Details from "./Details";
+import Card2 from "./Card2";
+
 
 function Home() {
   return (
@@ -80,6 +83,8 @@ function Home() {
       </Carousel>
       <Middle/>
       <Cardwork />
+      <Details />
+      <Card2 />
     </div>
   );
 }
