@@ -1,7 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
 
-
-
 function Details() {
   return (
     <Container className="de">
