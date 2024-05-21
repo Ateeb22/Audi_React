@@ -8,6 +8,7 @@ import Search from "../pages/Search";
 import Spinner from 'react-bootstrap/Spinner';
 
 
+
 function HeadNavbar() {
   return (
     <Container>
