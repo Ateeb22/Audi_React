@@ -2,21 +2,21 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Card from "./pages/Card";
-import Card2 from "./pages/Card2";
+// import Card from "./pages/Card";
+// import Card2 from "./pages/Card2";
+import Service from "./pages/Service";
 
 function App() {
   return <div>                                     
-  <BrowserRouter>
+  {/* <BrowserRouter>
       <Routes>
         <Route index element={<Home/>} />
          <Route path="/home" element={<Home/>} />
-         <Route path="/card" element={<Card/>} />
-             
+         <Route path="/service" element={<Service/>} />
 
       </Routes>
-  </BrowserRouter>
-
+  </BrowserRouter> */}
+<Home/>
   </div>;
 }
 

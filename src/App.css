@@ -117,3 +117,11 @@ background: radial-gradient(circle, rgba(112,175,255,1) 0%, rgba(162,251,251,1) 
 .ro{
   float: right;
 }
+.vd{
+  margin-top: 90px;
+}
+#mo{
+  /* text-indent: 10px; */
+  text-align: justify;
+  letter-spacing: 3px;
+}

@@ -8,7 +8,6 @@ import Search from "../pages/Search";
 import Spinner from 'react-bootstrap/Spinner';
 
 
-
 function HeadNavbar() {
   return (
     <Container>
@@ -34,12 +33,12 @@ function HeadNavbar() {
             lg={6}
             className="d-flex align-items-center"
           >
-            <Nav className="me-auto">
+            <Nav className="me-auto">            
               <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Services</Nav.Link>
+              <Nav.Link href="#service">Services</Nav.Link>            
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
-              <Nav.Link href="#member">About Us</Nav.Link>
+              <Nav.Link href="#about">About Us</Nav.Link>
             </Nav>
           </Col>
           <Col

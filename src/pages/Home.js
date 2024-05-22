@@ -5,88 +5,102 @@ import Button from "react-bootstrap/Button";
 import Middle from "./Middle";
 import Details from "./Details";
 import Card2 from "./Card2";
+import { Element } from "react-scroll";
+import Video from "./Video";
 
 function Home() {
   return (
+    
     <div>
-      <HeadNavbar />
-      <Carousel className="carousel-icon">
-        <Carousel.Item>
-          <div className="carousel-image-container">
-            <img
-              src="audi.jpg"
-              style={{ height: "635px", width: "100%", objectFit: "cover" }}
-            />
-            <div className="carousel-overlay"></div>
-          </div>
-          <Carousel.Caption>
-            <h2>Audi A4</h2>
-            <h5>Known for its elegant design and luxurious interior.</h5>
-            <Button className="sliderbutton" variant="light">
-              Register Now
-            </Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="carousel-image-container">
-            <img
-              src="audi-1.jpg"
-              style={{ height: "635px", width: "100%", objectFit: "cover" }}
-            />
-            <div className="carousel-overlay"></div>
-          </div>
-          <Carousel.Caption>
-            <h2>Audi E-Tron Gt</h2>
-            <h5>
-              Equipped with advanced infotainment and driver-assist features.
-            </h5>
-            <Button className="sliderbutton" variant="light">
-              Register Now
-            </Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="carousel-image-container">
-            <img
-              src="audi-2.jpeg"
-              style={{ height: "635px", width: "100%", objectFit: "cover" }}
-            />
-            <div className="carousel-overlay"></div>
-          </div>
-          <Carousel.Caption>
-            <h2>Audi Q5</h2>
-            <h5>Boasts a stylish exterior design with premium finishes.</h5>
-            <Button className="sliderbutton" variant="light">
-              Register Now
-            </Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <div className="carousel-image-container">
-            <img
-              src="yellow-audi.webp"
-              style={{ height: "635px", width: "100%", objectFit: "cover" }}
-            />
-            <div className="carousel-overlay"></div>
-          </div>
-          <Carousel.Caption>
-            <h2>Audi A-Coupe</h2>
-            <h5>
-              Features fuel-efficient engines without compromising performance.
-            </h5>
-            <Button className="sliderbutton" variant="light">
-              Register Now
-            </Button>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+      <Element name="home" id="home">
+        <HeadNavbar />
+        <Carousel className="carousel-icon">
+          <Carousel.Item>
+            <div className="carousel-image-container">
+              <img
+                src="audi-1.jpg "
+                style={{ height: "635px", width: "100%", objectFit: "cover" }}
+              />
+              <div className="carousel-overlay"></div>
+            </div>
+            <Carousel.Caption>
+              <h2>Audi A4</h2>
+              <h5>Known for its elegant design and luxurious interior.</h5>
+              <Button className="sliderbutton" variant="light">
+                Register Now
+              </Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="carousel-image-container">
+              <img
+                src="road-audi.jpg"
+                style={{ height: "635px", width: "100%", objectFit: "cover" }}
+              />
+              <div className="carousel-overlay"></div>
+            </div>
+            <Carousel.Caption>
+              <h2>Audi E-Tron Gt</h2>
+              <h5>
+                Equipped with advanced infotainment and driver-assist features.
+              </h5>
+              <Button className="sliderbutton" variant="light">
+                Register Now
+              </Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="carousel-image-container">
+              <img
+                src="char.jpg"
+                style={{ height: "635px", width: "100%", objectFit: "cover" }}
+              />
+              <div className="carousel-overlay"></div>
+            </div>
+            <Carousel.Caption>
+              <h2>Audi Q5</h2>
+              <h5>Boasts a stylish exterior design with premium finishes.</h5>
+              <Button className="sliderbutton" variant="light">
+                Register Now
+              </Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <div className="carousel-image-container">
+              <img
+                src="white-audi.jpg"
+                style={{ height: "635px", width: "100%", objectFit: "cover" }}
+              />
+              <div className="carousel-overlay"></div>
+            </div>
+            <Carousel.Caption>
+              <h2>Audi A-Coupe</h2>
+              <h5>
+                Features fuel-efficient engines without compromising
+                performance.
+              </h5>
+              <Button className="sliderbutton" variant="light">
+                Register Now
+              </Button>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </Element>
 
-      <Middle />
+      <Element  id="service">
+        <Middle />
+      </Element>
 
+      <Element  id="pricing">
       <Cardwork />
+      </Element>
 
+      <Element  id="contact" >
       <Details />
+      </Element>
 
+
+     
       <Card2
         imgg="blacky-bill.jpg"
         mantxt="Pioneering design icon"
@@ -102,6 +116,7 @@ function Home() {
         isLeft={true}
       />
 
+     <Element id="about" >
       <Card2
         imgg="light-bill.jpg"
         mantxt="The Art Technology"
@@ -134,7 +149,25 @@ function Home() {
              systems and advanced driver assistance technologies."
         isLeft={true}
       />
+      </Element>
+      {/* <Details/> */}
+
+      <Video     
+        tx="Audi's Excellence and Innovative Design."
+        md="Every
+        curve, every feature, is a symphony of design and functionality,
+        elevating driving to an art form. Audi isn't just a brand where every drive is a celebration of excellence
+        and a testament to the passion for pushing boundaries."
+        ur="audi-e-tron-gt-aero.mp4"
+        wd="100%"
+        he="100%"
+        lp="true"
+        con="false"
+        pl="true"
+        mu="muted"       
+      />
     </div>
+    
   );
 }
 

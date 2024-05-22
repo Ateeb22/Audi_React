@@ -8,7 +8,7 @@ function Card2(myprops) {
           {myprops.isLeft ? (
             <Row>
               <Col>
-                <Image src={myprops.imgg} className="round" thumbnail />
+                <Image src={myprops.imgg} className="round" roundedCircle />
               </Col>
               <Col>
                 <h1 id="txt" className="p-2">
@@ -36,7 +36,7 @@ function Card2(myprops) {
                 </h5>
               </Col>
               <Col>
-                <Image src={myprops.imgg} className="round" thumbnail />
+                <Image src={myprops.imgg} className="round" roundedCircle />
               </Col>
             </Row>
           )}
