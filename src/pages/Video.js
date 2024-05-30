@@ -1,33 +1,3 @@
-// import React from 'react'
-// import { Player } from 'video-react';
-
-// function Video() {
-//   return (
-//     <div>
-//        <Player>
-//           <source src="C:\Users\Ateeb.Sheikh\Desktop\React_Work\assessment\public\audi-e-tron-gt-aero.mp4" />
-//        </Player>
-//     </div>
-//   )
-// }
-
-// export default Video
-
-// import React from 'react';
-// import ReactPlayer from 'react-player';
-
-// function VideoPlayer() {
-//   return (
-//     <ReactPlayer
-//       url="C:\Users\Ateeb.Sheikh\Desktop\React_Work\assessment\public\audi-e-tron-gt-aero.mp4"
-//       width="640"
-//       height="360"
-//       controls
-//     />
-//   );
-// }
-
-// export default VideoPlayer;
 
 import React from "react";
 import { Container, Row,Col } from "react-bootstrap";
@@ -49,12 +19,13 @@ function VideoPlayer(myvd) {
             width={myvd.wd}
             height={myvd.he}
             loop={myvd.lp}
-            controls={myvd.con}
+            // controls={myvd.con}
             playing={myvd.pl}
             muted={myvd.mu}
           />
         </Col>
       </Row>
+     
     </Container>
   );
 }

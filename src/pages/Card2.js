@@ -14,7 +14,7 @@ function Card2(myprops) {
                 <h1 id="txt" className="p-2">
                   {myprops.mantxt}
                 </h1>
-                <h4 id="mid" className="p-2">
+                <h4 id="bot" className="p-2">
                   {myprops.midtxt}
                 </h4>
                 <h5 id="bot" className="p-2">
@@ -28,7 +28,7 @@ function Card2(myprops) {
                 <h1 id="txt" className="p-2">
                   {myprops.mantxt}
                 </h1>
-                <h4 id="mid" className="p-2">
+                <h4 id="bot" className="p-2">
                   {myprops.midtxt}
                 </h4>
                 <h5 id="bot" className="p-2">

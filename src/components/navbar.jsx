@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 // import { SiAudi } from "react-icons/si";
 import Search from "../pages/Search";
 import Spinner from 'react-bootstrap/Spinner';
-
+import './SpinnerLogo.css';
 
 function HeadNavbar() {
   return (
@@ -20,10 +20,12 @@ function HeadNavbar() {
             lg={2}
             className="d-flex align-items-center"
           >
-            <Spinner animation="border" variant="primary" />
-            <Spinner animation="border" variant="danger" />
-            <Spinner animation="border" variant="danger" />
-            <Spinner animation="border" variant="primary" />
+         <div className="spinner-logo">
+      <Spinner animation="border" variant="primary" className="ring" />
+      <Spinner animation="border" variant="danger" className="ring" />
+      <Spinner animation="border" variant="danger" className="ring" />
+      <Spinner animation="border" variant="primary" className="ring" />
+    </div>
             {/* <SiAudi className="call" /> */}
           </Col>
           <Col
