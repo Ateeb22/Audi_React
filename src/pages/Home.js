@@ -10,7 +10,9 @@ import Video from "./Video";
 import Footer from "../components/footer";
 import Bottom from "./Bottom";
 
+
 function Home() {
+  
   return (
     
     <div>
@@ -29,7 +31,7 @@ function Home() {
             <Carousel.Caption>
               <h2>Audi A4</h2>
               <h5>Known for its elegant design and luxurious interior.</h5>
-              <Button className="sliderbutton" variant="light">
+              <Button className="sliderbutton" variant="light"  >
                 Register Now
               </Button>
             </Carousel.Caption>
@@ -174,6 +176,7 @@ function Home() {
 
 
          <Footer />
+      
     </div>
        
   );

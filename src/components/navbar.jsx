@@ -8,6 +8,7 @@ import Search from "../pages/Search";
 import Spinner from 'react-bootstrap/Spinner';
 import './SpinnerLogo.css';
 
+
 function HeadNavbar() {
   return (
     <Container>
@@ -41,6 +42,7 @@ function HeadNavbar() {
               <Nav.Link href="#pricing">Pricing</Nav.Link>
               <Nav.Link href="#contact">Contact</Nav.Link>
               <Nav.Link href="#about">About Us</Nav.Link>
+       
             </Nav>
           </Col>
           <Col

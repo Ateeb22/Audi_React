@@ -2,14 +2,14 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import Spinner from "react-bootstrap/Spinner";
 import Accordion from "react-bootstrap/Accordion";
 
 function Footer() {
   return (
-    <div className="de" >
-      <Card className="text-center" id="ft">
-        <Card.Header>
+
+    <div className="de"  >
+      <Card className="text-center" id="ft" >
+        <Card.Header >
           <h2 id="ff" className="p-2">
             Driving an Audi is an experience where precision meets passion.
           </h2>
@@ -69,7 +69,6 @@ function Footer() {
             </Col>
           </Row>
         </Card.Body>
-
         <Card.Footer className="text-muted">
           Copyright © 7NSoft Systems 2024, All rights reserved.
         </Card.Footer>
