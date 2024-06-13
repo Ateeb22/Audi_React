@@ -112,8 +112,8 @@
   color: dodgerblue;
 }
 #but:hover{
-  background: rgb(112,175,255);
-background: radial-gradient(circle, rgba(112,175,255,1) 0%, rgba(162,251,251,1) 100%);
+  background: rgb(90,90,255);
+  background: radial-gradient(circle, rgba(90,90,255,1) 0%, rgba(131,30,255,1) 52%);
 }
 #txt{
   margin-top: 70px;

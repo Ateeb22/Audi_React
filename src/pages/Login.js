@@ -54,19 +54,22 @@
 
 // export default Login
 
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Container, Row, Col } from "react-bootstrap";
 
 function Login() {
   const navigate = useNavigate();
+  const [usName, setusName] = useState('');
+  const [pwd, setpwd] = useState('');
+
 
   var authentication = {
-    users: [{ username: "Munimbhai", password: "1234" }],
+    users: [{ username: "audi", password: "123" }],
     addUser: function () {
-      var usName = document.getElementById("usName").value;
-      var pwd = document.getElementById("pwd").value;
+      // var usName = document.getElementById("usName").value;
+      // var pwd = document.getElementById("pwd").value;
 
       var check = this.users.some(function (e) {
         return e.username === usName && e.password === pwd;
@@ -77,9 +80,9 @@ function Login() {
         navigate("/home");
       } else {
         console.log("Wrong Password");
-
-        document.getElementById("usName").value = "";
-        document.getElementById("pwd").value = "";
+        setusName('');
+        setpwd('');
+       
       }
     },
   };
@@ -107,6 +110,8 @@ function Login() {
                     name="userName"
                     id="usName"
                     placeholder="Username"
+                    value={usName}
+                    onChange={(e) => setusName(e.target.value)}
                   />
                 </div>
                 <div className="form-field d-flex align-items-center">
@@ -116,6 +121,8 @@ function Login() {
                     name="password"
                     id="pwd"
                     placeholder="Password"
+                    value={pwd}
+                    onChange={(e) => setpwd(e.target.value)}
                   />
                 </div>
                 <button type="submit" className="btn mt-3">
