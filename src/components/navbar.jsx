@@ -5,11 +5,20 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import { SiAudi } from "react-icons/si";
 import Search from "../pages/Search";
+import { Button } from "react-bootstrap";
 import Spinner from 'react-bootstrap/Spinner';
 import './SpinnerLogo.css';
+import { useNavigate } from "react-router-dom";
 
 
 function HeadNavbar() {
+
+  const Navigate = useNavigate();
+  const handlelogout = () => {
+    Navigate("/login")
+    localStorage.removeItem("token");
+  }
+
   return (
     <Container>
       <Navbar className="nav-container">
@@ -31,9 +40,9 @@ function HeadNavbar() {
           </Col>
           <Col
             sm={12}
-            md={6}
+            md={4}
             xs={12}
-            lg={6}
+            lg={5}
             className="d-flex align-items-center"
           >
             <Nav className="me-auto">            
@@ -47,12 +56,22 @@ function HeadNavbar() {
           </Col>
           <Col
             sm={12}
-            md={4}
+            md={5}
             xs={12}
             lg={4}
             className="d-flex align-items-center"
           >
             <Search />
+            
+          </Col>
+
+          <Col className="d-flex justify-content-around"
+          sm={12}
+          md={1}
+          xs={12}
+          lg={1}>
+
+          <Button onClick={handlelogout} variant="danger">LogOut</Button>
           </Col>
         </Row>
       </Navbar>

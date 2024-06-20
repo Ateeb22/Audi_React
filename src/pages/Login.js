@@ -54,13 +54,15 @@
 
 // export default Login
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Container, Row, Col } from "react-bootstrap";
+import AuthContext from "./AuthContext";
 
 function Login() {
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);          // is using context value provided by AuthContext, Context value we dont use props but can send data through component tree
   const [usName, setusName] = useState('');
   const [pwd, setpwd] = useState('');
 
@@ -77,9 +79,12 @@ function Login() {
 
       if (check) {
         console.log("Correct");
+        login();
         navigate("/home");
+        localStorage.setItem("token","audi")
+
       } else {
-        console.log("Wrong Password");
+        console.log("Wrong Password");      
         setusName('');
         setpwd('');
        
@@ -136,25 +141,6 @@ function Login() {
           </div>
         </Col>
       </Row>
-      {/* <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header>
-          <Modal.Title>{getModalData.name}</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>{getModalData.info}</Modal.Body>
-        <Modal.Footer>
-          <Button variant="danger" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="warning" onClick={handleClose}>
-            Understood
-          </Button>
-        </Modal.Footer>
-      </Modal> */}
     </Container>
   );
 }
