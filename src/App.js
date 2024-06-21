@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import PrivateRoute from "./pages/PrivateRoute";
 import { AuthProvider } from "./pages/AuthContext";
 import PublicRoute from "./pages/PublicRoute";
-// import { useNavigate } from "react-router-dom";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,41 +20,37 @@ function App() {
           <Route path="/" element={<PrivateRoute />}>
             <Route path="home" element={<Home />} />
             <Route path="user" element={<PrivateRoute />} />
-            <Route path="dashboard" element={<PrivateRoute />} />
+            <Route path="dashboard" element={<PublicRoute />} />
             <Route path="about" element={<PrivateRoute />} />
             <Route path="services" element={<PrivateRoute />} />
+          </Route>        
+
+          <Route path="/home" element={<PublicRoute />} >
+          <Route path="login" element={<Home />} />
           </Route>
+          
+          <Route path="*" element={<NotFound />} /> 
 
 
-          {/* <Route path="/" element={<PublicRoute />}>
-            <Route path="login" element={<Login />} />
-          </Route>
-          <Route path="/" element={<PrivateRoute />}>
+
+
+{/* <Route path="/" element={<PrivateRoute />}>
+            
             <Route path="home" element={<Home />} />
-            <Route path="user" element={<PrivateRoute />} />
-            <Route path="dashboard" element={<PrivateRoute />} />
-            <Route path="about" element={<PrivateRoute />} />
-            <Route path="services" element={<PrivateRoute />} />
-    
-          </Route> */}
+            <Route path="user" element={<Home />} />
+            <Route path="dashboard" element={<Home />} />
+            <Route path="about" element={<Home />} />
+            <Route path="services" element={<Home />} />
+          </Route>
+          <Route path="/login" element={<PublicRoute />}>
+            <Route path="" element={<Home />} />
+          </Route>
+       <Route path="*" element={<NotFound />} /> */}
 
 
 
 
 
-
-
-
-
-          {/* <Route path="/home" element={<Home />} />
-          <Route path="/" element={<PrivateRoute />}>
-            <Route path="login" element={<PrivateRoute />} />
-            <Route path="user" element={<PrivateRoute />} />
-            <Route path="dashboard" element={<PrivateRoute />} />
-            <Route path="about" element={<PrivateRoute />} />
-            <Route path="services" element={<PrivateRoute />} />
-          </Route> */}
-                  
             
         </Routes>
       </BrowserRouter>

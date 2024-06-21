@@ -54,6 +54,8 @@
 
 // export default Login
 
+
+
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
@@ -61,12 +63,11 @@ import { Container, Row, Col } from "react-bootstrap";
 import AuthContext from "./AuthContext";
 
 function Login() {
-  const navigate = useNavigate();
-  const { login } = useContext(AuthContext);          // is using context value provided by AuthContext, Context value we dont use props but can send data through component tree
   const [usName, setusName] = useState('');
   const [pwd, setpwd] = useState('');
-
-
+  const { login } = useContext(AuthContext);          // is using context value provided by AuthContext, Context value we dont use props but can send data through component tree
+  const navigate = useNavigate();
+ 
   var authentication = {
     users: [{ username: "audi", password: "123" }],
     addUser: function () {
