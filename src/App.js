@@ -12,11 +12,24 @@ function App() {
   return (
     <div>
       <AuthProvider>
-      <BrowserRouter>
-        <Routes>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/login" element={<PublicRoute />}>
+              <Route index element={<Login />} />
+            </Route>
+            <Route path="/" element={<PrivateRoute />}>
+              <Route path="home" element={<Home />} />
+              <Route path="user" element={<Home />} />
+              <Route path="dashboard" element={<Home />} />
+              <Route path="about" element={<Home />} />
+              <Route path="services" element={<Home />} />
+            </Route>
+            <Route path="*" element={<NotFound />} />
 
 
-         <Route path="/login" element={<Login />} />
+
+
+            {/* <Route path="/login" element={<Login />} />
           <Route path="/" element={<PrivateRoute />}>
             <Route path="home" element={<Home />} />
             <Route path="user" element={<PrivateRoute />} />
@@ -29,31 +42,11 @@ function App() {
           <Route path="login" element={<Home />} />
           </Route>
           
-          <Route path="*" element={<NotFound />} /> 
+          <Route path="*" element={<NotFound />} />  */}
 
 
-
-
-{/* <Route path="/" element={<PrivateRoute />}>
-            
-            <Route path="home" element={<Home />} />
-            <Route path="user" element={<Home />} />
-            <Route path="dashboard" element={<Home />} />
-            <Route path="about" element={<Home />} />
-            <Route path="services" element={<Home />} />
-          </Route>
-          <Route path="/login" element={<PublicRoute />}>
-            <Route path="" element={<Home />} />
-          </Route>
-       <Route path="*" element={<NotFound />} /> */}
-
-
-
-
-
-            
-        </Routes>
-      </BrowserRouter>
+          </Routes>
+        </BrowserRouter>
       </AuthProvider>
       {/* <Home/> */}
     </div>
@@ -63,4 +56,3 @@ function App() {
 export default App;
 
 // we have defined index element it means it is default the "Home" page will always open.
-

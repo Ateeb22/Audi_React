@@ -81,8 +81,9 @@ function Login() {
       if (check) {
         console.log("Correct");
         login();
-        navigate("/home");
         localStorage.setItem("token","audi")
+        navigate("/home");
+        
 
       } else {
         console.log("Wrong Password");      
